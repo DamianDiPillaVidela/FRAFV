@@ -1,0 +1,94 @@
+
+header{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid black;
+    margin-bottom: 50px;
+    justify-content: center;
+    background-color: rgb(82, 21, 21);
+}
+.name{
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none !important;
+}
+.title{
+    position: absolute;
+    left: 0;
+    margin: 0;
+    font-size: 250%;
+    font-family: sans-serif;
+    -webkit-text-stroke: 1.5px black;
+    color: aqua;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.billetes{
+    position: absolute;
+    left: 25%;
+}
+.click_button{
+  width: 150px;
+  height: 150px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmWqxcscwKicNWLGd40d5ZrxG135QbAZyRye-jIgRjA&s=10');
+  background-size: cover;       /* Ensures the image fills the button area */
+  background-position: center;  /* Centers the graphic */
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 25%;
+  top: 30%;
+}
+
+.printer_button{
+  width: 150px;
+  height: 150px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIFDCM-LD2Y1MJEsNkG3rLNF9zXQG8-bfpiAnEwz6Rhg&s=10');
+  background-size: cover;       /* Ensures the image fills the button area */
+  background-position: center;  /* Centers the graphic */
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+}
+.bank_button{
+  width: 150px;
+  height: 150px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_AE44L4rw-o13BdN3jTpPM1tXUA_8stIZm7diNwKjA&s=10');
+  background-size: cover;       /* Ensures the image fills the button area */
+  background-position: center;  /* Centers the graphic */
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.coste_printer{
+  position: absolute;
+  left: 65%;
+  top: 20%;
+}
+.cant_printer{
+  position: absolute;
+  left: 65%;
+  top: 25%;
+}
+.cant_bank{
+  position: absolute;
+  left: 65%;
+  top: 60%;
+}
+.coste_bank{
+  position: absolute;
+  left: 65%;
+  top: 55%;
+}

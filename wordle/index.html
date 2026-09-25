@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<header>
+    <a href="../">
+        <h1 class="title">FRAV</h1>
+    </a>
+    <h1 class="name">WORDLE</h1>
+</header>
+<body>
+    <form onsubmit="handleSubmit(event)">
+        <input type="text" id="guess" maxlength="5">
+        <input type="submit" hidden>
+    </form>
+    <div id="grid" class="grid"></div>
+    <script src="main.js"></script>
+</body>
+</html>
