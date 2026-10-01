@@ -44,6 +44,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid black;
 }
 body{
     margin: 0;
@@ -51,6 +52,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(164, 164, 164);
 }
 
 h2{

@@ -28,6 +28,7 @@ a{
 body{
     margin: 0;
     padding: 0;
+    background-color: rgb(164, 164, 164);
 }
 .billetes{
     position: absolute;

@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 let moveX=Math.random() < 0.5;
 let turnoDisplay = document.getElementById("turno");
 turnoDisplay.textContent = "Turno de: " + (moveX ? "X" : "O");
 let ganador= document.getElementById("ganador");
-=======
-let moveX=true;
->>>>>>> f0bdeb1dcf1aa4ebb0f3305075eb7e56e86e2a0c
 let board =[
     "","","",
     "","","",
@@ -18,7 +14,6 @@ function handleclick(e){
     if(btn.textContent==""){
         btn.textContent= move;
         moveX= !moveX;
-<<<<<<< HEAD
         turnoDisplay.textContent = "Turno de: " + (moveX ? "X" : "O");
         }
     let buttons = Array.from(document.querySelectorAll(".board button"));
@@ -48,8 +43,6 @@ function checkWinner(){
     if(board[2]==board[4] && board[4]==board[6] && board[2]!=""){
         ganador.textContent = "Ganador: " + board[2];
         return;
-=======
->>>>>>> f0bdeb1dcf1aa4ebb0f3305075eb7e56e86e2a0c
     }
 }
 const tablero=document.querySelector(".board");
@@ -57,8 +50,4 @@ tablero.addEventListener("click", function(e){
     if(e.target.tagName === "BUTTON"){
         handleclick(e);
     }
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> f0bdeb1dcf1aa4ebb0f3305075eb7e56e86e2a0c
