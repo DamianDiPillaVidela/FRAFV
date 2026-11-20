@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="../" aria-label="Volver al inicio"><h1 class="title">FRAV</h1></a>
+        <h1 class="name">Road Game</h1>
+    </header>
+    <main>
+        <div id="game-area">
+            <div class="game-stats" aria-label="Estado de la partida">
+                <span>Distancia: <span id="score">0</span></span>
+                <span>Récord: <span id="best-score">0</span></span>
+                <span id="timer-stat" hidden>Tiempo: <span id="timer">60</span></span>
+                <button id="restart-button" type="button">Reiniciar</button>
+            </div>
+            <canvas id="game-canvas" width="900" height="600" aria-label="Cruza la carretera y esquiva el tráfico usando las flechas del teclado.">
+                Tu navegador no admite el elemento canvas necesario para jugar.
+            </canvas>
+            <div id="game-message" role="status" aria-live="polite">
+                <div class="message-card">
+                    <h2 id="message-title">Road Game</h2>
+                    <p id="message-text">Elige cómo quieres jugar.</p>
+                    <div class="mode-choices" id="mode-choices">
+                        <button class="mode-button" type="button" data-mode="casual">Casual</button>
+                        <button class="mode-button" type="button" data-mode="speed">Prueba de Velocidad</button>
+                    </div>
+                    <button id="start-button" type="button" hidden>Empezar</button>
+                </div>
+            </div>
+        </div>
+        <p class="controls-hint">Flechas o WASD para moverte · ↑ para avanzar · ↓ para retroceder</p>
+    </main>
+</body>
+</html>

@@ -34,25 +34,22 @@ for (const character of alphabet) {
     letterElement.classList.add("letter");
     letterElement.textContent = character;
     letterElement.dataset.letter = character.toLowerCase();
+    letterElement.addEventListener("click", () => handleGuess(character.toLowerCase()));
     letters.appendChild(letterElement);
 }
 let guesses= [];
 let times=0;
 let fallos = 1;
+let terminado = false;
 const guy = document.getElementById("guy");
-function handleSubmit(event) {
-    event.preventDefault();
-
-    const input = document.getElementById("guess");
-    const guess = input.value.trim().toLowerCase();
-
-    if (!guess || guess.length !== 1) return;
+function handleGuess(guess) {
+    if (terminado) return;
 
     const letterElement = [...letters.querySelectorAll(".letter")]
         .find(element => element.dataset.letter === guess);
 
     if (letterElement) {
-        letterElement.classList.remove("correct", "incorrect");
+        if (letterElement.classList.contains("correct") || letterElement.classList.contains("incorrect")) return;
         letterElement.classList.add(
             correctword.includes(guess) ? "correct" : "incorrect"
         );
@@ -60,13 +57,13 @@ function handleSubmit(event) {
     const cells = document.querySelectorAll(".row .cell");
 if (!correctword.includes(guess)) {
     fallos = Math.min(fallos + 1, 7);
-    guy.style.backgroundImage = `url("./Vecino_${fallos}.png")`;
+    guy.style.backgroundImage = `url("./stick_${fallos}.png")`;
 
     if (fallos === 7) {
         document.getElementById("status").textContent =
             "¡Perdiste! La palabra era " + correctword;
 
-        input.disabled = true;
+        terminado = true;
         setTimeout(() => {
             location.reload();
         }, 2000);
@@ -86,11 +83,9 @@ const gano = [...correctword].every((letra, i) =>
         document.getElementById("status").textContent =
             "¡Ganaste!";
 
-        input.disabled = true;
+        terminado = true;
         setTimeout(() => {
             location.reload();
         }, 2000);
     }
-
-    input.value = "";
 }

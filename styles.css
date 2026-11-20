@@ -3,6 +3,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    min-width: 1280px;
+    min-height: 100vh;
 }
 .title{
     font-size: 500%;
@@ -16,18 +19,20 @@ header{
     border-bottom: 0px solid black;
     margin-bottom: 30px;
     justify-content: center;
-    width: 100%;
+    width: 1280px;
     height: 220px;
 }
 .game-links {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
     gap: 20px;
-    align-self: flex-start;
-    margin-left: 20px;
+    width: 1260px;
+    margin: 0 auto 32px;
+    box-sizing: border-box;
 }
 .game-links button {
-    width: 300px;
+    width: 100%;
+    min-width: 0;
     height: 180px;
     padding: 0;
     background-size: cover;

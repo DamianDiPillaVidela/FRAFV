@@ -1,0 +1,80 @@
+header{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid black;
+    margin-bottom: 50px;
+    justify-content: center;
+    background-color: rgb(72, 123, 73);
+    width: 100%;
+
+}
+.name{
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none !important;
+}
+.title{
+    position: absolute;
+    left: 10px;
+    top: -3px;
+    margin: 0;
+    font-size: 250%;
+    font-family: sans-serif;
+    -webkit-text-stroke: 1.5px black;
+    color: #a3f3a4;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  #0f2a2a;
+;
+}
+.score{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.score-box{
+    background-color: white;
+    border: 2px solid black;
+    padding: 8px 15px;
+    font-size: 18px;
+}
+.btn{
+    background-color: white;
+    border: 2px solid black;
+    padding: 8px 15px;
+    font-size: 18px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #a3f3a4;
+}
+#canvas{
+    background-color: white;
+    border: 3px solid black;
+    max-width: calc(100vw - 20px);
+    height: auto;
+    touch-action: none;
+    cursor: none;
+}
+#status{
+    color: white;
+    margin: 20px 0 40px 0;
+    font-family: sans-serif;
+    font-size: 22px;
+    min-height: 26px;
+}
