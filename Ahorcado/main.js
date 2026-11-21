@@ -57,7 +57,7 @@ function handleGuess(guess) {
     const cells = document.querySelectorAll(".row .cell");
 if (!correctword.includes(guess)) {
     fallos = Math.min(fallos + 1, 7);
-    guy.style.backgroundImage = `url("./stick_${fallos}.png")`;
+    guy.style.backgroundImage = `url("./stick_${fallos-1}.png")`;
 
     if (fallos === 7) {
         document.getElementById("status").textContent =
